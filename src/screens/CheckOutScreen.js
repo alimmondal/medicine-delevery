@@ -1,9 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View, Button, TextInput } from "react-native";
+import { StyleSheet, Text, View, Button, TextInput, Image } from "react-native";
+import checkOutImage from './../../assets/checkoutImage.jpg';
 
 const CheckOutScreen = (props) => {
   return (
-    <View>
+    <View style={styles.viewStyle}>
+        <Image 
+             source={checkOutImage}
+             style={styles.imageStyle}
+             /> 
       <View style={{ textAlign: "center" }}>
         <Text>Order Total-------$680</Text>
         <Text>Shipping----------$80</Text>
@@ -11,7 +16,10 @@ const CheckOutScreen = (props) => {
         <Text>Total-------------$760</Text>
       </View>
 
-      <Text style={{ fontSize: 20, color: "blue", textAlign: "center", marginTop:30 }}>Payment Method</Text>
+      <Text style={{fontSize: 20, 
+         color: "blue", 
+         textAlign: "center",
+         marginTop:30 }}>Payment Method</Text>
 
       <View style={{ textAlign: "center" }}>
         <Text>Credit/Debit Card</Text>
@@ -32,9 +40,17 @@ const CheckOutScreen = (props) => {
 export default CheckOutScreen;
 
 const styles = StyleSheet.create({
-  input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-  },
+    imageStyle: {
+        width:200,
+        height:200,
+        borderRadius:100,
+        
+        
+    },
+    viewStyle: {
+         flexDirection:'column',
+         alignItems:'center',
+         justifyContent:'center',
+         marginTop:'150' 
+    }
 });

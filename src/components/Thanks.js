@@ -7,18 +7,17 @@ const Thanks = (props) => {
     return (
         <View>
             
-            <View>
-            
+            <View style={styles.viewStyle}>
+            <Text>Thanks for choosing us</Text>
              <Image 
              source={thanksImage}
              style={styles.imageStyle}
              /> 
              
-            {/* <Text>{price}</Text> */}
             <Button 
               title='Thanks for choosing us'
               onPress={function () {
-                  props.navigation.navigate("Order");
+                  props.navigation.navigate("List");
                 }}
             />
             </View>
@@ -42,10 +41,6 @@ const styles = StyleSheet.create({
         textAlign:'center'
     },
     viewStyle: {
-        border: '1px solid blue',
-        borderRadius:10,
-        padding:10,
-        margin:5,
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
