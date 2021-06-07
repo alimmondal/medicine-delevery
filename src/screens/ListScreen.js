@@ -29,7 +29,25 @@ const ListScreen = (props) => {
 
     return (
         <View>
-            <Text style={{fontSize:30, textAlign:'center', color:'goldenrod'}}>Top Company</Text>
+            <View style={{flexDirection: 'row',alignItems:'center', justifyContent:'space-between', margin:50, border:'1px solid blue',padding:30, borderRadius:10}}>
+                <View>
+                <Text style={{fontSize:20, fontWeight:'bold'}}>We Will Deliver </Text>
+                <Text style={{fontSize:20,}}>Your Medicine </Text>
+                <Button 
+                    title='Order Now'
+                    onPress={function () {
+                        props.navigation.navigate("Order");
+                        }}
+                    />
+                </View>
+                <View>
+                    <Image
+                        source={require("./../../assets/Red-Bike.png")}
+                        style={{ width: 150, height: 150, borderRadius:100 }}
+                    />
+                </View>
+            </View>
+            <Text style={{fontSize:30, textAlign:'center', color:'goldenrod', marginTop:30}}>Top Company</Text>
             <FlatList
                 // showsHorizontalScrollIndicator={false}
                 horizontal={true}
@@ -42,7 +60,7 @@ const ListScreen = (props) => {
                
 
             <View>  
-            <Text style={{fontSize:30, textAlign:'center', color:'goldenrod'}}>Popular Product</Text>
+            <Text style={{fontSize:30, textAlign:'center', color:'goldenrod',marginTop:30}}>Popular Product</Text>
             {
                 products.map(product => <View style={styles.viewStyle}>
                     <Image
