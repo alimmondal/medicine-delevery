@@ -7,6 +7,7 @@ const Stack = createStackNavigator();
 import HomeScreen from './src/screens/HomeScreen';
 import ListScreen from './src/screens/ListScreen';
 import CheckOutScreen from './src/screens/CheckOutScreen';
+import Thanks from './src/components/Thanks';
 
 
 
@@ -18,6 +19,7 @@ function App(){
           <Stack.Screen name="Home" component= {HomeScreen}></Stack.Screen>
           <Stack.Screen name="List" component= {ListScreen}></Stack.Screen>
           <Stack.Screen name="Order" component= {CheckOutScreen}></Stack.Screen>
+          <Stack.Screen name="Thanks" component= {Thanks}></Stack.Screen>
        </Stack.Navigator>
      </NavigationContainer>
     );

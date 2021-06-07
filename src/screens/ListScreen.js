@@ -18,10 +18,12 @@ const ListScreen = (props) => {
 
 
      const products = [
-        {id:'1', title: "Multivitamin", price:'$200', imageSource : require("../../assets/bottle1.jpg") },
+        {id:'1', title: "Multivitamin", price:'$200', imageSource : require("../../assets/bottle2.jpg") },
         {id:'2', title: "Multivitamin", price:'$200' , imageSource : require("../../assets/bulti.jpg")},
         {id:'3', title: "Multivitamin", price:'$200', imageSource : require("../../assets/capsul.jpg")},
-         {id:'4', title: "Vitamin", price:'$200', imageSource : require("../../assets/bottle1.jpg")}
+         {id:'4', title: "Vitamin", price:'$200', imageSource : require("../../assets/bottle1.jpg")},
+         {id:'5', title: "Vitamin", price:'$200', imageSource : require("../../assets/bottle3.jpg")},
+         {id:'6', title: "Vitamin", price:'$200', imageSource : require("../../assets/bottle2.jpg")},
      ]
 
     

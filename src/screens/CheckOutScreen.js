@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Button, TextInput } from "react-native";
 
-const CheckOutScreen = () => {
+const CheckOutScreen = (props) => {
   return (
     <View>
       <View style={{ textAlign: "center" }}>
@@ -22,7 +22,7 @@ const CheckOutScreen = () => {
       <Button
         title="place Order"
         onPress={function () {
-          //   props.navigation.navigate("");
+            props.navigation.navigate("Thanks");
         }}
       />
     </View>

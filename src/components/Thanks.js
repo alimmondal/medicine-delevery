@@ -1,23 +1,22 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image, Button } from 'react-native'
-
-const ProductDetail = (props) => {
-    console.log(props)
-   const {title, price, imageSource,} = props.product;
+import thanksImage from '../../assets/thanks.png';
+const Thanks = (props) => {
+   
 
     return (
         <View>
             
-            <View style={styles.viewStyle}>
+            <View>
             
              <Image 
-             source={imageSource}
+             source={thanksImage}
              style={styles.imageStyle}
              /> 
-             <Text>{title}</Text>
-            <Text>{price}</Text>
+             
+            {/* <Text>{price}</Text> */}
             <Button 
-              title='Order Now'
+              title='Thanks for choosing us'
               onPress={function () {
                   props.navigation.navigate("Order");
                 }}
@@ -38,8 +37,9 @@ const styles = StyleSheet.create({
         margin:5,
     },
     imageStyle: {
-        width:200,
-        height:200
+        width:355,
+        height:500,
+        textAlign:'center'
     },
     viewStyle: {
         border: '1px solid blue',
@@ -53,4 +53,4 @@ const styles = StyleSheet.create({
         
     }
 })
-export default ProductDetail;
+export default Thanks;
