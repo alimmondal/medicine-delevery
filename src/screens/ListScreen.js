@@ -59,29 +59,34 @@ const ListScreen = (props) => {
                 }}
             />
 
-               
 
-            <View>  
+            <View >
             <Text style={{fontSize:30, textAlign:'center', color:'goldenrod',marginTop:30}}>Popular Product</Text>
-            {
-                products.map(product => <View style={styles.viewStyle}>
-                    <Image
-                        source={product.imageSource}
-                        style={{width:200, height:200}}
-                    />
-                    <Text>{product.title}</Text>
-                    <Text>{product.price}</Text>
-                    <Button 
-                    title='Order Now'
-                    onPress={function () {
-                        props.navigation.navigate("Order");
-                        }}
-                    />
-                </View>)
-            }
-            
-            
+               <FlatList
+                // showsHorizontalScrollIndicator={false}
+                horizontal={true}
+                data={products}
+                renderItem={function ({item}){
+                    return (
+                        <View style={{border:'1px solid blue',borderRadius:10,padding:10, margin:10 }}>
+                            <Image
+                                source={item.imageSource}
+                                style={{width:200, height:200}}
+                            />
+                            <Text>{item.title}</Text>
+                            <Text>{item.price}</Text>
+                            <Button 
+                            title='Order Now'
+                            onPress={function () {
+                                props.navigation.navigate("Order");
+                                }}
+                            />
+                        </View>
+                    )
+                }}
+            />
             </View>
+
            </View>
     )
 }
